@@ -1,32 +1,3 @@
-// function login(){
-//     var user = document.getElementById("username").value;
-//     var passw = document.getElementById("password").value;
-//     var remember = document.getElementById("remember-me").checked;
-    
-//     if(remember){
-//         console.log(remember)
-//     }else{
-//         console.log(remember)
-//     }
-
-//     if(user && passw){
-//         if(user == localStorage.getItem("usuario") 
-//         && passw == localStorage.getItem("contraseña") || 
-//         user == "usuario" 
-//         && passw == "contraseña"){
-//             if(remember){
-//                 console.log(remember)
-//             }
-//             alert("Bienvenido " + user);
-//             window.location="perfil.html"
-//         }else{
-//             alert("Datos incorrectos")
-//             console.log("Usuario: " + user + " Contraseña: " + passw)
-//         }
-//     }else{
-//         alert("Ingrese usuario y contraseña!")
-//     } 
-// }
 const loginForm = document.getElementById('loginForm');
 
 loginForm.addEventListener('submit', function(e) {

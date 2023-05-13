@@ -1,29 +1,3 @@
-// function register(){
-//     var user = document.getElementById("username").value;
-//     var passw = document.getElementById("password").value;
-//     var passw2 = document.getElementById("password-2").value;
-//     var email = document.getElementById("email").value;
-//     var age = document.getElementById("age").value;
-//     var location = document.getElementById("location").value;
-
-//     if(user && passw && passw2 && email){
-//         if(passw == passw2 ){
-//             localStorage.setItem("usuario", user) 
-//             localStorage.setItem("contraseña", passw)
-//             localStorage.setItem("mail", email)
-//             localStorage.setItem("edad", age)
-//             localStorage.setItem("ubicacion", location)
-//             alert("Registro exitoso");
-//             window.location="perfil.html"
-//         }else{
-//             alert("Las contraseñas no coinciden")
-//         }
-//     }else{
-//         alert("Rellenar todos los campos")
-
-//     }
-// }
-
 const myForm = document.getElementById('myForm');
 
 myForm.addEventListener("submit", function (e) {
