@@ -1,0 +1,97 @@
+// function register(){
+//     var user = document.getElementById("username").value;
+//     var passw = document.getElementById("password").value;
+//     var passw2 = document.getElementById("password-2").value;
+//     var email = document.getElementById("email").value;
+//     var age = document.getElementById("age").value;
+//     var location = document.getElementById("location").value;
+
+//     if(user && passw && passw2 && email){
+//         if(passw == passw2 ){
+//             localStorage.setItem("usuario", user) 
+//             localStorage.setItem("contraseña", passw)
+//             localStorage.setItem("mail", email)
+//             localStorage.setItem("edad", age)
+//             localStorage.setItem("ubicacion", location)
+//             alert("Registro exitoso");
+//             window.location="perfil.html"
+//         }else{
+//             alert("Las contraseñas no coinciden")
+//         }
+//     }else{
+//         alert("Rellenar todos los campos")
+
+//     }
+// }
+
+const myForm = document.getElementById('myForm');
+
+myForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const age = document.getElementById('age').value;
+    const location = document.getElementById('location').value;
+    const passw = document.getElementById("password").value;
+    const passw2 = document.getElementById("password-2").value;
+
+    if (name && email && age && location && passw && passw2) {
+        if (passw == passw2) {
+
+
+            const data = {
+                nombre: name,
+                email: email,
+                edad: age,
+                ubicacion: location,
+                pass: passw
+            };
+
+            // Obtener el último ID utilizado del localStorage
+            let lastId = parseInt(localStorage.getItem('lastId')) || 0;
+
+            // Obtener datos del localStorage
+            let dataArray = JSON.parse(localStorage.getItem('myData')) || [];
+
+            // Comprobar si el email ya existe en algún conjunto de datos
+            let emailExists = false;
+            for (let i = 0; i < dataArray.length; i++) {
+                if (dataArray[i].data.email === email) {
+                    emailExists = true;
+                    break;
+                }
+            }
+
+            if (emailExists) {
+                alert('El email ya existe en el almacenamiento');
+            } else {
+                // Generar el siguiente ID incrementando el último ID en 1
+                const id = lastId + 1;
+
+                // Agregar los nuevos datos al array
+                dataArray.push({
+                    id: id,
+                    data: data
+                });
+
+                // Guardar el array de datos en el localStorage
+                localStorage.setItem('myData', JSON.stringify(dataArray));
+
+                // Guardar el último ID utilizado en el localStorage
+                localStorage.setItem('lastId', id);
+
+                // Limpiar el formulario
+                myForm.reset();
+
+                alert('Registro exitoso. Bienvenido!');
+                window.location="perfil.html"
+            }
+        } else {
+            alert("Las contraseñas no coinciden")
+        }
+    } else {
+        alert("Rellenar todos los campos")
+
+    }
+});

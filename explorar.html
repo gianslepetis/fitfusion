@@ -1,45 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Red Social</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorar - FitFusion</title>
+
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
     <header>
         <nav>
-            <a href="contacto.html">Contacto</a>
-            <a href="perfil.html">Mi Perfil</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="index.html">Inicio</a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="explorar.html">Amigos</a></li>
+                <li><a href="contacto.html">Mensajes</a></li>
+            </ul>
+            <br>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
     <main>
         <section id="misc">
             <div class="container">
                 <h1>Explora y conecta con usuarios de tu zona</h1>
-                <p>Espacio para desarrollar contenido explicativo del sitio, links, imagenes, texto, video, etc.</p>
             </div>
         </section>
+
         <section id="features">
             <div class="container">
                 <div class="explore">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolore quaerat laborum in eius
-                        totam quam commodi at distinctio recusandae ea eligendi, quos odio molestias, saepe ipsum, magni
-                        atque modi.
-                    </p>
-                </div>
+                    <div class="friend">
+                      <img src="img/amigo1.jpg" alt="Amigo 1">
+                      <h3>Nombre del amigo 1</h3>
+                      <p>Descripción breve del amigo 1</p>
+                    </div>
+                    <div class="friend">
+                      <img src="img/amigo2.jpg" alt="Amigo 2">
+                      <h3>Nombre del amigo 2</h3>
+                      <p>Descripción breve del amigo 2</p>
+                    </div>
+                    <div class="friend">
+                      <img src="img/amigo3.jpg" alt="Amigo 3">
+                      <h3>Nombre del amigo 3</h3>
+                      <p>Descripción breve del amigo 3</p>
+                    </div>
+                    <div class="friend">
+                      <img src="img/amigo4.jpg" alt="Amigo 4">
+                      <h3>Nombre del amigo 4</h3>
+                      <p>Descripción breve del amigo 4</p>
+                    </div>
+                    <div class="friend">
+                      <img src="img/amigo5.jpg" alt="Amigo 5">
+                      <h3>Nombre del amigo 5</h3>
+                      <p>Descripción breve del amigo 5</p>
+                    </div>
+                  </div>  
             </div>
         </section>
     </main>
+    <section></section>
     <footer>
-        <div class="container">
-            <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2023 FitFusion TM</p>
     </footer>
+</section>
+    <script src="js/script.js"></script>
 </body>
 </html>

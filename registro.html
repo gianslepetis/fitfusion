@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Red Social</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - FitFusion</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="contacto.html">Contacto</a>
-            <a href="perfil.html">Mi Perfil</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="index.html">Inicio</a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="explorar.html">Amigos</a></li>
+                <li><a href="contacto.html">Mensajes</a></li>
+            </ul>
+            <br>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
     <main>
         <section id="misc">
             <div class="container">
-                <h2>Registrate y disfruta de los beneficios</h2>
-                <p>Pagina para formulacio de registro o inicio de sesion</p>
+                <h1>Registrate ahora y comienza a disfrutar de los beneficios</h1>
             </div>
         </section>
         <section id="features">
             <div class="container">
                 <div class="explore">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolore quaerat laborum in eius
-                        totam quam commodi at distinctio recusandae ea eligendi, quos odio molestias, saepe ipsum, magni
-                        atque modi.
-                    </p>
+                    <form id="myForm">
+                        <label for="nombre">Nombre:</label><br />
+                        <input type="text" id="username" name="nombre" placeholder="Ingrese usuario" required /><br />
+                        <label for="email">Email:</label><br />
+                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico"
+                            required /><br />
+                        <label for="edad">Edad:</label><br />
+                        <input type="text" id="age" name="edad" placeholder="Ingrese su edad" required /><br />
+                        <label for="ubicacion">Ubicacion:</label><br />
+                        <input type="text" id="location" name="ubicacion" placeholder="Ingrese su ubicacion"
+                            required /><br />
+                        <label for="contraseña">Contraseña:</label><br />
+                        <input type="password" id="password" name="nombre" placeholder="Ingrese contraseña"
+                            required /><br />
+                        <label for="contraseña-2">Repita contraseña:</label><br />
+                        <input type="password" id="password-2" name="nombre" placeholder="Repita contraseña"
+                            required /><br />
+                        <button type="submit">Registro</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -41,5 +64,9 @@
             <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+
 </body>
+
 </html>

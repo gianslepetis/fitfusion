@@ -1,49 +1,127 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Mi Perfil - FitFusion</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
+  <head>
+    <title>Mi Red Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <a href="contacto.html">Contacto</a>
-            <a href="perfil.html">Mi Perfil</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="index.html">Inicio</a>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="explorar.html">Amigos</a></li>
+          <li><a href="contacto.html">Mensajes</a></li>
+        </ul>
+        <button class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
     </header>
+
     <main>
-        <section id="perfil">
-            <div class="container">
-                <h2>Mi Perfil</h2>
-                <div class="perfil-info">
-                    <div class="perfil-imagen">
-                        <img src="img/perfil.jpg" alt="Mi Foto de Perfil">
-                    </div>
-                    <div class="perfil-detalles">
-                        <h3>John Doe</h3>
-                        <p>Edad: 30 años</p>
-                        <p>Ubicación: Buenos Aires, Argentina </p>
-                        <a href="#">Editar Perfil</a>
-                    </div>
-                </div>
+
+
+      <section id="perfil-generico">
+        <div class="container">
+          <h3>Debes iniciar sesion para ver el contenido</h3>
+        </div>
+      </section>
+
+
+      <section id="perfil">
+        <div class="container">
+          <h2>Mi Perfil</h2>
+          <div class="perfil-info">
+            <div class="perfil-imagen">
+              <img src="img/perfil.jpg" alt="Mi Foto de Perfil">
             </div>
-        </section>
-        <section id="actividad">
-            <h2>Actividad</h2>
-            <br>
-            <div class="actividad-info">
-                <p>No hay actividad reciente</p>
-                <br>
+            <div class="perfil-detalles">
+              <h3 id="usuario"></h3>
+              <p id="edad"></p>
+              <p id="ubicacion"></p>
+              <a onclick="closeSession()" href="index.html">Cerrar Sesion</a>
+              <p>Algo sobre mí</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="actividad">
+        <h2>Actividad</h2>
+        <br>
+        <div class="actividad-info">
+          <hr>
+          <div>
+            <h3>Sesión de entrenamiento funcional</h3>
+            <p>Fecha: 10 de Mayo, 2023</p>
+            <p>Lugar: Gimnasio local</p>
+            <p>Participantes: 5</p>
+            <p>Duración: 1 hora</p>
+          </div>
+          <hr>
+          <div>
+            <h3>Sesión de levantamiento de pesas</h3>
+            <p>Fecha: 8 de Mayo, 2023</p>
+            <p>Lugar: Gimnasio local</p>
+            <p>Participantes: 3</p>
+            <p>Duración: 1 hora y 30 minutos</p>
+          </div>
+          <hr>
+          <div>
+            <h3>Sesión de yoga</h3>
+            <p>Fecha: 7 de Mayo, 2023</p>
+            <p>Lugar: Parque central</p>
+            <p>Participantes: 10</p>
+            <p>Duración: 1 hora</p>
+          </div>
+        </div>
+      </section>
+      
+    
     </main>
+
     <footer>
-        <div class="container"></div>
-            <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
+      <div class="container">
+        <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
+      </div>
     </footer>
+  </body>
+</html>
+
+    <script src="js/script.js"></script>
+    <script>
+
+        var sesion = localStorage.getItem("sesion_iniciada")
+        if (sesion == 0){
+          document.getElementById("actividad").style.display="none"
+          document.getElementById("perfil").style.display="none"
+        }else{
+          document.getElementById("perfil-generico").style.display="none"
+        }
+
+        function closeSession() {
+          localStorage.setItem("nombre", "");
+          localStorage.setItem("edad", "");
+          localStorage.setItem("ubicacion", "");
+          localStorage.setItem("sesion_iniciada", 0)
+        }
+
+        var logUser = localStorage.getItem("nombre")
+        var logUserAge = localStorage.getItem("edad")
+        var logUserLocation = localStorage.getItem("ubicacion")
+
+        document.getElementById(`usuario`).innerHTML = logUser
+        document.getElementById(`edad`).innerHTML = "Edad: " + logUserAge
+        document.getElementById(`ubicacion`).innerHTML = "Ubicacion: " + logUserLocation
+
+
+    </script>
 </body>
 </html>

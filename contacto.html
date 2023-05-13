@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - FitFusion</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="contacto.html">Contacto</a>
-            <a href="perfil.html">Mi Perfil</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="index.html">Inicio</a>
-        </nav>
-    </header>
+    <div class="navbar">
+        <a href="contacto.html">Contacto</a>
+        <a href="perfil.html">Mi Perfil</a>
+        <a href="explorar.html">Explorar</a>
+        <a href="index.html">Inicio</a>
+    </div>
     <main>
         <section id="misc">
             <div class="container">
                 <h1>Ponte en contacto con nosotros</h1>
-                <p>Pagina para insertar formuario de contacto (o registro)</p>
             </div>
         </section>
         <section id="features">
             <div class="container">
                 <div class="explore">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolore quaerat laborum in eius
-                        totam quam commodi at distinctio recusandae ea eligendi, quos odio molestias, saepe ipsum, magni
-                        atque modi.
-                    </p>
+                    <form action="/enviar-mensaje" method="POST">
+                        <label for="nombre">Nombre:</label><br />
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese usuario" required/><br />
+                        <label for="email">Email:</label><br />
+                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico" required /><br />
+                        <label for="mensaje">Mensaje:</label><br />
+                        <textarea element.style="height:300px" id="mensaje" name="mensaje" placeholder="Texto del mensaje" required></textarea><br />
+                        <input type="submit" value="Enviar mensaje" />
+                      </form>
                 </div>
             </div>
         </section>

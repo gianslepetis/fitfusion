@@ -22,35 +22,10 @@ header {
     color: #ffffff;
 }
 
-nav ul {
-    
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    float: right;
-    display: inline-flex;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav a {
-    font-size: large;
-    float: right;
-    padding: 15px 2.5vw;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav a:hover{
-    color: #ff3366;
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Estilos del hero */
@@ -89,8 +64,24 @@ nav a:hover{
     background-color: #ff3366;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
+}
+
+.cta-button-2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #386cfc;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-2:hover {
+    background-color: #3022fa;
 }
 
 .cta-button:hover {
@@ -208,14 +199,15 @@ footer {
 
 .actividad-info {
     height: 70vh;
-    color: #b3afaf;
+    color: #ffffff;
 }
-
+ .actividad-info h2{
+    color: #e62958;
+ }
 /* Estilos de perfil-actividad */
 #actividad h2{
     color: #fff;
 }
-
 
 
 /* Estilos de la seccion explorar */
@@ -230,7 +222,7 @@ footer {
 
 /* Estilos de las demas secciones (hero modificado) */
 #misc{
-    background-image: url(../img/misc.png);
+    background-image: url(../img/fondo.png);
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -255,4 +247,27 @@ footer {
 #misc p {
     font-size: 14px;
     margin-bottom: 30px;
+}
+
+/* Estilo para el botón de inicio de sesión */
+button {
+    font-size: 18px;
+    background-color: #383838;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button :hover{
+    background-color: #838586;
+}
+
+@media (max-width: 800px) {
+    .row,
+    .navbar {
+        flex-direction: column;
+        float: initial /*Cambio de horizontal a vertical en ambas clases*/
+    }
 }
