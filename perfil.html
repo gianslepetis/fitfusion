@@ -99,7 +99,7 @@
     <script>
 
         var sesion = localStorage.getItem("sesion_iniciada")
-        if (sesion == 0){
+        if (sesion == 0 || sesion == null){
           document.getElementById("actividad").style.display="none"
           document.getElementById("perfil").style.display="none"
         }else{
