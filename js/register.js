@@ -13,7 +13,6 @@ myForm.addEventListener("submit", function (e) {
     if (name && email && age && location && passw && passw2) {
         if (passw == passw2) {
 
-
             const data = {
                 nombre: name,
                 email: email,
@@ -58,8 +57,18 @@ myForm.addEventListener("submit", function (e) {
                 // Limpiar el formulario
                 myForm.reset();
 
-                alert('Registro exitoso. Bienvenido!');
-                window.location="perfil.html"
+                alert('Registro exitoso. Bienvenid@ ' + name + '!!');
+
+                var logedUser = name;
+                var logedUserAge = age;
+                var logedUserLocation = location;
+
+                localStorage.setItem("nombre", logedUser),
+                    localStorage.setItem("edad", logedUserAge),
+                    localStorage.setItem("ubicacion", logedUserLocation),
+                    localStorage.setItem("sesion_iniciada", 1)
+
+                window.location = "perfil.html"
             }
         } else {
             alert("Las contraseñas no coinciden")

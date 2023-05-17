@@ -1,14 +1,17 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   background-color: #f2f2f2;
+  min-height: 100vh; /* Añadido para asegurar que el cuerpo tenga al menos la altura completa del viewport */
+  display: flex;
+  flex-direction: column; /* Hace que el contenido se distribuya verticalmente */
 }
 
 header {
@@ -51,6 +54,7 @@ nav a:hover {
   color: #ff3366;
 	text-decoration: none;
 }
+
 
 .btn {
   white-space: inherit;
@@ -170,6 +174,35 @@ nav a:hover {
     }
   }
 
+  /* Estilos de las demas secciones (hero modificado) */
+#misc{
+  background-image: url(../img/fondo.png);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#misc h1 {
+  font-size: 10vw, 10vh;
+  margin-bottom: 20px;
+}
+
+#misc h2 {
+  font-size: 10vw, 10vh;
+  color: #fff;
+}
+
+#misc p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
   #features {
     background-color: #fff;
     padding: 80px 0;
@@ -223,10 +256,11 @@ nav a:hover {
 }
 
 footer {
-    background-color: #202020;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #202020;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Empuja el footer hacia la parte inferior */
 }
 
 #actividad {
@@ -304,3 +338,5 @@ footer {
     width: 100%;
   }
 }
+
+

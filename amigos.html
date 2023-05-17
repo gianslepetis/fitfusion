@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - FitFusion</title>
+    <title>Amigos - FitFusion</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/fitfusion.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
 
@@ -25,6 +26,7 @@
                 <li><a href="amigos.html">Amigos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <br>
             <button class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -32,50 +34,23 @@
             </button>
         </nav>
     </header>
-
     <main>
-        <section id="hero">
-            <div class="container">
-                <h1>Bienvenido a FitFusion</h1>
-                <p>¡Conéctate con otros entusiastas del entrenamiento físico y alcanza tus metas juntos!</p>
-                <a href="registro.html" id="show-register" class="cta-button">Regístrate</a>
-                <button id="show-login" class="cta-button-2" style="margin-top:10px">Inicia Sesión</button>
+        <section id="perfil-generico">
+            <div class="container" style="padding-top:50px; text-align:center">
+      
+              <h3>Debes iniciar sesion para ver el contenido</h3>
+              <br>
+              <a href="registro.html" id="show-register" class="cta-button">Regístrate</a>
+              <button id="show-login" class="cta-button-2" style="margin-top:10px">Inicia Sesión</button>
+      
             </div>
-        </section>
-        <section id="features">
-            <div class="container">
-                <div class="feature">
-                    <img src="img/musculo.png" alt="Icono 1">
-                    <a class='btn' href="amigos.html">
-                        <h3>Comunidad Activa</h3>
-                    </a>
-                    <p>Únete a una comunidad activa de personas interesadas en el entrenamiento físico, entrena junto a
-                        ellos
-                        y comparte tus logros y progresos.</p>
-                </div>
-                <div class="feature">
-                    <img src="img/plan.png" alt="Icono 2">
-                    <a class='btn' href="amigos.html">
-                        <h3>Comparte tu Entrenamiento</h3>
-                    </a>
-                    <p>Comparte tu plan de entrenamiento en la comunidad y gana puntos por quienes lo prueben y.</p>
-                </div>
-                <div class="feature">
-                    <img src="img/entrenador.png" alt="Icono 3">
-                    <a class='btn' href="perfil.html">
-                        <h3>Seguimiento de Progresos</h3>
-                    </a>
-                    <p>Registra tus entrenamientos, realiza un seguimiento de tus progresos y alcanza tus metas de
-                        fitness de manera efectiva.</p>
-                </div>
-            </div>
-        </section>
+          </section>
     </main>
-
     <footer>
-        <p>&copy; 2023 FitFusion TM</p>
+        <div class="container">
+            <p>&copy; 2023 FitFusion TM</p>
+        </div>
     </footer>
-
     <script src="js/script.js"></script>
 
 
@@ -138,12 +113,16 @@
 
         var sesion = localStorage.getItem("sesion_iniciada")
 
-        if (sesion == 1) {
+        if (sesion == 0 || sesion == null) {
+            document.getElementById("features").style.display = "none"
+        } else {
+            document.getElementById("perfil-generico").style.display = "none"
             document.getElementById("show-login").style.display = "none"
             document.getElementById("show-register").style.display = "none"
         }
 
     </script>
-</body>
+    <script src="js/amigosAPI.js"></script>
 
+</body>
 </html>

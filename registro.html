@@ -2,10 +2,16 @@
 <html>
 
 <head>
-    <title>Mi Red Social</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - FitFusion</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/fitfusion.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/formulario.css">
 </head>
@@ -16,10 +22,9 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="explorar.html">Amigos</a></li>
-                <li><a href="contacto.html">Mensajes</a></li>
+                <li><a href="amigos.html">Amigos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
-            <br>
             <button class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -38,22 +43,18 @@
                 <div class="explore">
                     <form id="myForm">
                         <label for="nombre">Nombre:</label><br />
-                        <input type="text" id="username" name="nombre" placeholder="Ingrese usuario" required /><br />
+                        <input type="text" id="username" name="nombre" placeholder="Ingrese usuario" /><br />
                         <label for="email">Email:</label><br />
-                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico"
-                            required /><br />
+                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico" /><br />
                         <label for="edad">Edad:</label><br />
-                        <input type="text" id="age" name="edad" placeholder="Ingrese su edad" required /><br />
+                        <input type="text" id="age" name="edad" placeholder="Ingrese su edad" /><br />
                         <label for="ubicacion">Ubicacion:</label><br />
-                        <input type="text" id="location" name="ubicacion" placeholder="Ingrese su ubicacion"
-                            required /><br />
+                        <input type="text" id="location" name="ubicacion" placeholder="Ingrese su ubicacion" /><br />
                         <label for="contraseña">Contraseña:</label><br />
-                        <input type="password" id="password" name="nombre" placeholder="Ingrese contraseña"
-                            required /><br />
+                        <input type="password" id="password" name="nombre" placeholder="Ingrese contraseña" /><br />
                         <label for="contraseña-2">Repita contraseña:</label><br />
-                        <input type="password" id="password-2" name="nombre" placeholder="Repita contraseña"
-                            required /><br />
-                        <button type="submit">Registro</button>
+                        <input type="password" id="password-2" name="nombre" placeholder="Repita contraseña" /><br />
+                        <button type="submit" style="width:100%; border-radius: 5px; padding: 12px;">Registro</button>
                     </form>
                 </div>
             </div>
