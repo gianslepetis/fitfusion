@@ -12,6 +12,7 @@ body {
   min-height: 100vh; /* Añadido para asegurar que el cuerpo tenga al menos la altura completa del viewport */
   display: flex;
   flex-direction: column; /* Hace que el contenido se distribuya verticalmente */
+  overflow-x: hidden; /* Nueva propiedad agregada */
 }
 
 header {
