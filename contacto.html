@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FitFusion</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/fitfusion.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="amigos.html">Amigos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <br>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="misc">
+            <div class="container">
+                <h1>Ponte en contacto con nosotros</h1>
+            </div>
+        </section>
+        <section id="features">
+            <div class="container">
+                <div class="explore">
+                    <form action="https://formsubmit.co/fernandez.matias62@gmail.com" method="POST">
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese usuario" required /><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico"
+                            required /><br>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea element.style="height:300px" id="mensaje" name="mensaje"
+                            placeholder="Texto del mensaje" required></textarea><br>
+                        <input type="submit" value="Enviar" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

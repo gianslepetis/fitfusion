@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - FitFusion</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/fitfusion.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/55b4f6e85a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="amigos.html">Amigos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="misc">
+            <div class="container">
+                <h1>Registrate ahora y comienza a disfrutar de los beneficios</h1>
+            </div>
+        </section>
+        <section id="features">
+            <div class="container">
+                <div class="explore">
+                    <form id="myForm">
+                        <label for="nombre">Nombre:</label><br />
+                        <input type="text" id="username" name="nombre" placeholder="Ingrese usuario" /><br />
+                        <label for="email">Email:</label><br />
+                        <input type="email" id="email" name="email" placeholder="Ingrese Correo Electronico" /><br />
+                        <label for="edad">Edad:</label><br />
+                        <input type="text" id="age" name="edad" placeholder="Ingrese su edad" /><br />
+                        <label for="ubicacion">Ubicacion:</label><br />
+                        <input type="text" id="location" name="ubicacion" placeholder="Ingrese su ubicacion" /><br />
+                        <label for="contraseña">Contraseña:</label><br />
+                        <input type="password" id="password" name="nombre" placeholder="Ingrese contraseña" /><br />
+                        <label for="contraseña-2">Repita contraseña:</label><br />
+                        <input type="password" id="password-2" name="nombre" placeholder="Repita contraseña" /><br />
+                        <button type="submit" style="width:100%; border-radius: 5px; padding: 12px;">Registro</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 FitFusion. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>

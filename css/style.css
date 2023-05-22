@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  min-height: 100vh; /* Añadido para asegurar que el cuerpo tenga al menos la altura completa del viewport */
+  display: flex;
+  flex-direction: column; /* Hace que el contenido se distribuya verticalmente */
+  overflow-x: hidden; /* Nueva propiedad agregada */
+}
+
+header {
+	background-color: #363434;
+	color: #fff;
+}
+
+nav {
+	display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+nav h1 {
+	font-size: 24px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav li {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+  font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff3366;
+	text-decoration: none;
+}
+
+
+.btn {
+  white-space: inherit;
+}
+
+/* Estilos del hero */
+#hero {
+    background-image: url(../img/hero6.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff3366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #386cfc;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button-2:hover {
+    background-color: #3022fa;
+}
+
+.cta-button:hover {
+    background-color: #e62958;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .nav-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px)
+  }
+
+@media screen and (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+    .nav-toggle {
+      display: block;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px;
+    }
+    nav ul.show {
+      display: flex;
+      flex-direction: column;
+      background-color: #363634;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  /* Estilos de las demas secciones (hero modificado) */
+#misc{
+  background-image: url(../img/fondo.png);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#misc h1 {
+  font-size: 10vw, 10vh;
+  margin-bottom: 20px;
+}
+
+#misc h2 {
+  font-size: 10vw, 10vh;
+  color: #fff;
+}
+
+#misc p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+  #features {
+    background-color: #fff;
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;  
+}
+
+.feature {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.feature img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #000000;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.btn :hover{
+    color: #e62958;
+}
+
+.feature p {
+    font-size: 18px;
+    color: #666;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	nav li:nth-child(4) {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	nav li:nth-child(4) {
+		display: block;
+	}
+}
+
+footer {
+  background-color: #202020;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Empuja el footer hacia la parte inferior */
+}
+
+#actividad {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.actividad-info div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.actividad-info div h3 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.explore {
+  flex-basis: calc(100% / 3 - 20px);
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friend {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.friend img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.friend-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.friend h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.friend p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .friend {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .friend {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .friend {
+    width: 100%;
+  }
+}
+
+
+
+
+
+.covers {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.covers img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .covers {
+    height: auto;
+  }
+  
+  .hero-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+  }
+}
