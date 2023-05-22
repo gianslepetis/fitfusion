@@ -26,7 +26,7 @@ if (sesion == 0 || sesion == null) {
                                     <img src=${elemento.picture.large}>
                                     <h3>${elemento.name.first + " " + elemento.name.last}</h3>
                                     <p>${elemento.location.city + ", " + elemento.location.country}</p><br>
-                                    <button style="padding:8px 20px; position:center">Conectar</button>
+                                    <button class="connect-button" style="padding:8px 20px; position:center">Conectar</button>
                                </div>
                             `
             console.log(amigosAPI)
