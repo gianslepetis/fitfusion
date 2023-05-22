@@ -340,8 +340,13 @@ footer {
 }
 
 
+
+
+
 .covers {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .covers img {
@@ -352,19 +357,41 @@ footer {
 
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
   text-align: center;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content h1 {
-  font-size: 36px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .hero-content p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .covers {
+    height: auto;
+  }
+  
+  .hero-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+  
+  .hero-content h1 {
+    font-size: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 14px;
+  }
 }
