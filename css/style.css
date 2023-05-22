@@ -396,3 +396,42 @@ footer {
     font-size: 14px;
   }
 }
+
+.connect-button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.connect-button:hover {
+  background-color: #e62958;
+}
+
+@media screen and (max-width: 576px) {
+  .connect-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .connect-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .connect-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
